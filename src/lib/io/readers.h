@@ -22,6 +22,7 @@ bool writeGEO(const char* filename,const ParticlesData& p,const bool compressed)
 bool writePDB(const char* filename,const ParticlesData& p,const bool compressed);
 bool writePDA(const char* filename,const ParticlesData& p,const bool compressed);
 bool writePTC(const char* filename,const ParticlesData& p,const bool compressed);
+bool writeRIB(const char* filename,const ParticlesData &p,const bool compressed);
 }
 
 #endif

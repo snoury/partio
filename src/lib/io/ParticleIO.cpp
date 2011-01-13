@@ -69,6 +69,7 @@ writers()
         data["pdb"]=writePDB;
         data["pda"]=writePDA;
         data["ptc"]=writePTC;
+        data["rib"]=writeRIB;
     }
     return data;
 }

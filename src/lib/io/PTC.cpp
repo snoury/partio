@@ -127,14 +127,14 @@ ParticlesDataMutable* readPTC(const char* filename,const bool headersOnly)
     ParticleAttribute radiusHandle=simple->addAttribute("radius",FLOAT,1);
     std::string typeName,name;
 
-    // data types are "float", "point", "vector", "normal", "color", or "matrix"
+    // other data types are "float", "point", "vector", "color", or "matrix"
     int parsedSize=0;
     for(int chanNum=0;chanNum<nVars;chanNum++){
         ParseSpec(GetString(*input,'\n'),typeName,name);
 
         int dataSize=0;
         ParticleAttributeType dataType;
-        if(typeName=="color" || typeName=="vector" || typeName=="point" || typeName=="color"){
+        if(typeName=="color" || typeName=="vector" || typeName=="point"){
             dataType=VECTOR;
             dataSize=3;
         }else if(typeName=="matrix"){
