@@ -40,9 +40,9 @@ namespace Partio
                  : new std::ofstream(filename, std::ios::out | std::ios::binary));
 
     ParticleAttribute dummy;
-    bool foundP     = p.attributeInfo("P",     dummy) | p.attributeInfo("position",  dummy);
-    bool foundP2    = p.attributeInfo("P2",    dummy) | p.attributeInfo("position2", dummy);
-    bool foundWidth = p.attributeInfo("width", dummy) | p.attributeInfo("radius",    dummy);
+    bool foundP     = p.attributeInfo("position",  dummy) || p.attributeInfo("P",     dummy);
+    bool foundP2    = p.attributeInfo("position2", dummy) || p.attributeInfo("P2",    dummy);
+    bool foundWidth = p.attributeInfo("radius",    dummy) || p.attributeInfo("width", dummy);
 
     if(!foundP)
     {
